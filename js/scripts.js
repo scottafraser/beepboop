@@ -57,7 +57,7 @@ $(document).ready(function() {
 
       for (x = 0; x < number.length; x ++) {
         if (number % 3 === 0 && (number[x]) !== '0') {
-           array.push("I'm sorry, Dave.")
+           array.push("I'm sorry, Dave. I'm afraid I can't do that.")
           break
         } else {
           var boopArray = (range(0, number))
