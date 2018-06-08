@@ -17,7 +17,6 @@ function singleDigits(one) {
 
   for (x = 1; x < one.length; x++) {
       if (one[x] > 9 ) {
-        debugger
         bigNum.push(one[x])
         var inArray = bigNum.toString()
         var stringArray = inArray.split('')
