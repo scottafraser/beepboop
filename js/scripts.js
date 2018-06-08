@@ -1,20 +1,15 @@
-function splitInput (split) {
-  var inArray =[]
-  inArray.push(split)
-  inArray.split('')
-  return inArray
+function splitInput (number) {
+  var inArray = number.toString()
+  var stringArray = inArray.split('')
+  return stringArray
 };
 
-
+$(document).ready(function() {
   $("form#puzzle").submit(function(event){
       event.preventDefault();
-
-
-      var letters = sentence.split("");
-      var array = []
+      var number = $('#inputNumber').val();
 
       for (x = 0; x < letters.length; x ++) {
-        for (j = 0; j < vowels.length; j ++ )
         if (letters[x] === vowels[j]) {
            letters[x] = ("-")
            array.push(j)
