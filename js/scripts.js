@@ -54,24 +54,18 @@ $(document).ready(function() {
       var number = $('#inputNumber').val();
       var theArray = []
       var array = []
-
       for (x = 0; x < number.length; x ++) {
         if (number % 3 === 0 && (number[x]) !== '0') {
            array.push("I'm sorry, Dave. I'm afraid I can't do that.")
           break
         } else {
           var boopArray = (range(0, number))
-          console.log(boopArray);
           theArray = singleDigits(boopArray)
           array.push(theArray)
-          console.log(theArray);
           break
-
         }
        };
-
       var finalanswer = array
-
       $('#result').text(finalanswer);
     });
   });
