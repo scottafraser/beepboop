@@ -11,17 +11,19 @@ $(document).ready(function() {
       var array = []
 
       for (x = 0; x < number.length; x ++) {
-        if (number[x] === '0' ) {
-           number = ('boop')
-           array.push('boop')
+        if (parseInt(number.join('')) % 3 === 0 && (number[x]) !== '0') {
+           array.push("I'm sorry, Dave.")
+          break
         } else if (number[x] === "1") {
-          number === ('beep')
           array.push('beep')
+          break
+        } else if (number[x] === '0' ) {
+          array.push('boop')
+          break
         } else {}
        };
-
-       console.log(array);
-      var finalanswer = array.join('');
+       
+      var finalanswer = array
 
       $('#result').text(finalanswer);
 
