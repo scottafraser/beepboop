@@ -7,48 +7,49 @@ function range(start, end) {
 };
 
 function makeRange (make) {
-  var rangeNum = (make.join('')).range(0,make)
+  var rangeNum = (make.join('')).range(1,make)
   return newRange
 };
 
-function doubleDigits (two) {
-  var inArray = one.toString()
-  var stringArray = inArray.split('')
-    for (x = 0; x < stringArray.length; x ++) {
-      if (stringArray[x] === '1') {
-        digitArray.push('Boop!')
-        break
-      } else if (stringArray[x] === '0' ) {
-        digitArray.push('Beep!')
-        break
-     }
-  }
-}
-
 function singleDigits(one) {
   var digitArray = []
-  for (x = 1; x < one.length; x ++) {
-    // if (one[x] !== 0 || one[x] !== 1 && inArray < 10 ) {
-    //     digitArray.push(one[x])
-       // if (one > 9 ) {
-       //  doubleDigits(one)
-        if (one[x] === 1) {
+  var bigNum = []
+
+  for (x = 0; x < one.length; x++) {
+      if (one[x] > 9 ) {
+        debugger
+        bigNum.push(one[x])
+        var inArray = bigNum.toString()
+        var stringArray = inArray.split('')
+          for (i = 1; i <one.length; i++) {
+            if (stringArray.includes('1')) {
+              digitArray.push('Boop!')
+              bigNum = []
+              break
+            } else if (stringArray.includes('0')) {
+              digitArray.push('Beep!')
+              bigNum =[]
+              break
+            } else {
+              digitArray.push(one[x])
+            }
+          }
+      } else if (one[x] === 1) {
         digitArray.push('Boop!')
       } else if (one[x] === 0 ) {
         digitArray.push('Beep!')
-      } else if (one[x] !== 0 || one[x] !== 1)
+      } else if (one[x] !== 0 || one[x] !== 1) {
         digitArray.push(one[x])
-   }
-
-  return digitArray
-  console.log(digitArray);
+      } {}
+ }
+  return digitArray;
 }
+
 
 
 $(document).ready(function() {
   $("form#puzzle").submit(function(event){
       event.preventDefault();
-      // var number = splitInput($('#inputNumber').val());
       var number = $('#inputNumber').val();
       var theArray = []
       var array = []
@@ -62,6 +63,8 @@ $(document).ready(function() {
           console.log(boopArray);
           theArray = singleDigits(boopArray)
           array.push(theArray)
+          console.log(theArray);
+          break
 
         }
        };

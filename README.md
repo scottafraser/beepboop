@@ -12,9 +12,9 @@ Practice in arrays and looping
 
 | Behavior	| INPUT	| OUTPUT |
 | ----------| ----- | -------|
-|Program replaces 0 with 'Beep!' | 0 | ["Beep!"]   
-|Program replaces 1 with 'Boop!'| 1 | ["Boop!"] |
-|Program replaces numbers divisible by 3 with "I'm sorry, ___. I'm afraid I can't do that"| 3| "I'm sorry, ___. I'm afraid I can't do that" |
+|Program replaces any number with 0 with 'Beep!' | 0 | ["Beep!"]   
+|Program replaces any number with 1 with 'Boop!'| 1 | ["Boop!"] |
+|Program replaces numbers divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that"| 3| "I'm sorry, Dave. I'm afraid I can't do that" |
 |Program takes users name in form | "Dave"| "I'm sorry, Dave. I'm afraid..."|
 ## Setup/Contribution Requirements
 
