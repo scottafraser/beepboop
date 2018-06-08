@@ -15,7 +15,7 @@ function singleDigits(one) {
   var digitArray = []
   var bigNum = []
 
-  for (x = 0; x < one.length; x++) {
+  for (x = 1; x < one.length; x++) {
       if (one[x] > 9 ) {
         debugger
         bigNum.push(one[x])
@@ -32,6 +32,7 @@ function singleDigits(one) {
               break
             } else {
               digitArray.push(one[x])
+              break
             }
           }
       } else if (one[x] === 1) {
