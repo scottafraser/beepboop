@@ -7,17 +7,21 @@ function splitInput (number) {
 $(document).ready(function() {
   $("form#puzzle").submit(function(event){
       event.preventDefault();
-      var number = $('#inputNumber').val();
+      var number = splitInput($('#inputNumber').val());
+      var array = []
 
-      for (x = 0; x < letters.length; x ++) {
-        if (letters[x] === vowels[j]) {
-           letters[x] = ("-")
-           array.push(j)
-        } else {
-         array.push()}
-      };
+      for (x = 0; x < number.length; x ++) {
+        if (number[x] === '0' ) {
+           number = ('boop')
+           array.push('boop')
+        } else if (number[x] === "1") {
+          number === ('beep')
+          array.push('beep')
+        } else {}
+       };
 
-      var finalanswer = letters.join('');
+       console.log(array);
+      var finalanswer = array.join('');
 
       $('#result').text(finalanswer);
 
